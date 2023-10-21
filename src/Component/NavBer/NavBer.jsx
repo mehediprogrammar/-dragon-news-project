@@ -1,11 +1,24 @@
+import { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../Provider/AuthProvider";
 
 
 const NavBer = () => {
+
+  const {user, logOut } = useContext(AuthContext)
+
+  const handleSinOut = () => {
+    logOut()
+    .then()
+    .catch()
+  }
+
   const navLink = <>
          <li><Link to="/">Home</Link></li>
          <li><Link>About</Link></li>
          <li><Link>Career</Link></li>
+         <li><Link to="/login " >Login</Link></li>
+         <li><Link to="/register">Register</Link></li>
 
   </>
 
@@ -30,7 +43,16 @@ const NavBer = () => {
   </div>
   <div className="navbar-end gap-4">
     <img className="h-10" src="../../../public/All_img_logo/user.png" alt="" />
-    <a className="btn bg-[#403F3F]  text-white">Login</a>
+
+     {
+       user ? <button onClick={handleSinOut} className="btn bg-[#403F3F]  text-white" >sinOut</button>
+      
+      :    <Link  to="/login" >
+       <button className="btn bg-[#403F3F]  text-white" >Login</button>
+       </Link>
+     }
+    
+  
   </div>
 </div>
         </div>

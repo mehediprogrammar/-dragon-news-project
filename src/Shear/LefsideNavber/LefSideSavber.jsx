@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import LefSideCard from "./LefSideCard";
 
 
 
@@ -24,6 +25,10 @@ const LefSideSavber = () => {
                     key={category.id}>
                    {category.name}</Link> )
             }
+
+            <div>
+                <LefSideCard></LefSideCard>
+            </div>
         </div>
     );
 };

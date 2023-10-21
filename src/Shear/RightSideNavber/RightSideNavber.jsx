@@ -1,5 +1,6 @@
 import { FaFacebook, FaGithub, FaGoogle, FaTwitter, FaWhatsapp } from 'react-icons/fa';
 
+
 const RightSideNavber = () => {
   return (
     <div>
@@ -43,7 +44,18 @@ const RightSideNavber = () => {
        <img className='mt-10 h-full' src="../../../public/All_img_logo/qZone3.png" alt="" />
 
 
-
+          <div className='mt-6'>
+          <div className="hero min-h-screen" style={{backgroundImage: 'url(https://i.ibb.co/VQXgxVx/bg1.png)'}}>
+  <div className="hero-overlay bg-opacity-60"></div>
+  <div className="hero-content text-center text-neutral-content">
+    <div className="max-w-sm">
+      <h1 className="mb-5 text-2xl font-bold">Create an Amazing NewspaperHello there</h1>
+      <p className="mb-5">Discover thousands of options, easy to customize layouts, one-click to import demo and much more.</p>
+      <button className="btn btn-secondary ">Learn More</button>
+    </div>
+  </div>
+</div>
+          </div>
 
       </div>
 
